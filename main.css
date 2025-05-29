@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Overpass", sans-serif;
+}
+:root {
+  --orange-500: hsl(25, 97%, 53%);
+  --grey-500: hsl(217, 12%, 63%);
+  --grey-900: hsl(213, 19%, 18%);
+  --grey-950: hsl(216, 12%, 8%);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #141519;
+}
+.card,
+.submit-card {
+  background-color: var(--grey-900);
+  border-radius: 30px;
+  max-width: 410px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 35px;
+  margin-inline: 15px;
+}
+.submit-card {
+  text-align: center;
+  display: none;
+}
+.submit-card .image {
+  margin-bottom: 20px;
+}
+p.selection {
+  color: var(--orange-500);
+  background-color: #272e38;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.card .icon {
+  margin-bottom: 30px;
+  position: relative;
+}
+.card .icon::before {
+  content: "";
+  background-color: #272e38;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 40%;
+  left: 8px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+p.large {
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+p.normal {
+  color: var(--grey-500);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.card .text {
+  margin-bottom: 15px;
+}
+.card .rate {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.card .rate div {
+  background-color: #262f38;
+  color: var(--grey-500);
+  border-radius: 75%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-top: 5px;
+}
+.card .rate div.selected {
+  background-color: var(--orange-500);
+  color: var(--grey-950);
+}
+.card p.submit {
+  background-color: var(--orange-500);
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 15px;
+  padding-top: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card p.submit:hover,
+.card .rate div:hover {
+  background-color: white;
+  color: var(--grey-950);
+}
