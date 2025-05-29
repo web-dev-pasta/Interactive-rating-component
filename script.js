@@ -12,7 +12,9 @@ allDivs.forEach((e) => {
 let pSelection = document.querySelector("p.selection");
 let submitButton = document.querySelector(".submit");
 submitButton.addEventListener("click", () => {
-  card.style.display = "none";
-  pSelection.innerHTML = `You selected ${x} out of 5`;
-  submitCard.style.display = "block";
+  if (x) {
+    card.style.display = "none";
+    pSelection.innerHTML = `You selected ${x} out of 5`;
+    submitCard.style.display = "block";
+  }
 });
